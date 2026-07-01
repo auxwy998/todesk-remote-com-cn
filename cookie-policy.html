@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie 政策 - ToDesk 远程控制</title>
+    <meta name="description" content="ToDesk Cookie政策，详细说明我们如何使用Cookies和类似技术来提升您的用户体验。">
+    <meta name="keywords" content="ToDesk Cookie,Cookies,追踪技术">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #0a1628;
+            --secondary: #1e3a5f;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --text-white: #ffffff;
+            --text-gray: #94a3b8;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', -apple-system, sans-serif;
+            background-color: var(--primary);
+            color: var(--text-white);
+            line-height: 1.8;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+        
+        .btn-download {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 140px 0 100px;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--text-white), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+        
+        .page-header p {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+        
+        .content-card {
+            background: rgba(30, 58, 95, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .content-card h2 {
+            font-size: 1.4rem;
+            color: var(--accent-cyan);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .content-card h3 {
+            font-size: 1.15rem;
+            color: var(--text-white);
+            margin: 25px 0 15px;
+        }
+        
+        .content-card p {
+            color: var(--text-gray);
+            margin-bottom: 15px;
+        }
+        
+        .content-card ul {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .content-card ul li {
+            color: var(--text-gray);
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        .content-card ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+        }
+        
+        .highlight {
+            color: var(--accent-cyan);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-cyan);
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            gap: 12px;
+        }
+        
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .cookie-table th,
+        .cookie-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .cookie-table th {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--text-white);
+            font-weight: 600;
+        }
+        
+        .cookie-table td {
+            color: var(--text-gray);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary);
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            padding: 50px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-brand .logo {
+            margin-bottom: 20px;
+        }
+        
+        .footer-brand .logo img {
+            height: 50px;
+        }
+        
+        .footer-brand p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        
+        .footer-column h5 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text-white);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: var(--text-gray);
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent-cyan);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom-links {
+            margin-bottom: 15px;
+        }
+        
+        .footer-bottom-links a {
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        
+        .footer-bottom-links a:hover {
+            color: var(--accent-cyan);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .content-card {
+                padding: 25px;
+            }
+            
+            .cookie-table {
+                font-size: 0.9rem;
+            }
+            
+            .cookie-table th,
+            .cookie-table td {
+                padding: 10px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
+    <script charset="UTF-8" id="LA-COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"3QQPPstt6fK5NwcH",ck:"3QQPPstt6fK5NwcH"})</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="logo.svg" alt="ToDesk">
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html">首页</a>
+                    <a href="index.html#features">功能介绍</a>
+                    <a href="index.html#comparison">产品对比</a>
+                    <a href="https://www.todesk.com/download.html" class="btn-download">立即下载</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                ← 返回首页
+            </a>
+            
+            <div class="page-header">
+                <h1>Cookie 政策</h1>
+                <p>最后更新日期：2024年1月1日</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>一、什么是 Cookie</h2>
+                <p>Cookie 是一种小型文本文件，当您访问网站时，网站会将 Cookie 发送至您的浏览器并存储在您的设备上。Cookie 能帮助网站识别您的设备，记录您的偏好设置，并为您提供更好的用户体验。</p>
+                <p>除 Cookie 外，我们还可能使用类似的追踪技术，如像素标签（Pixel Tags）、网络信标（Web Beacons）等，用于了解用户如何与我们的网站和服务互动。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>二、我们使用的 Cookie 类型</h2>
+                
+                <h3>2.1 必要 Cookie</h3>
+                <p>这些 Cookie 对于网站的基本功能运行必不可少，无法关闭。它们通常仅在您进行操作（如登录、填写表单）时设置。</p>
+                
+                <h3>2.2 功能 Cookie</h3>
+                <p>这些 Cookie 使网站能够记住您的选择（如语言偏好、地区设置），提供增强的个性化功能。</p>
+                
+                <h3>2.3 分析 Cookie</h3>
+                <p>这些 Cookie 帮助我们了解用户如何与我们的网站互动，识别访问量最大的页面，追踪用户在网站上的活动路径，以便我们改善服务质量。</p>
+                
+                <h3>2.4 营销 Cookie</h3>
+                <p>这些 Cookie 用于向您展示与您兴趣相关的广告。我们可能会与第三方广告合作伙伴共享这些信息。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>三、详细 Cookie 列表</h2>
+                <table class="cookie-table">
+                    <thead>
+                        <tr>
+                            <th>Cookie 名称</th>
+                            <th>类型</th>
+                            <th>用途</th>
+                            <th>有效期</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>_ga</td>
+                            <td>分析 Cookie</td>
+                            <td>区分用户，统计访问量</td>
+                            <td>2 年</td>
+                        </tr>
+                        <tr>
+                            <td>_gid</td>
+                            <td>分析 Cookie</td>
+                            <td>区分用户，统计访问量</td>
+                            <td>24 小时</td>
+                        </tr>
+                        <tr>
+                            <td>_gat</td>
+                            <td>分析 Cookie</td>
+                            <td>限制请求频率</td>
+                            <td>1 分钟</td>
+                        </tr>
+                        <tr>
+                            <td>locale</td>
+                            <td>功能 Cookie</td>
+                            <td>记住语言和地区设置</td>
+                            <td>1 年</td>
+                        </tr>
+                        <tr>
+                            <td>session_id</td>
+                            <td>必要 Cookie</td>
+                            <td>维护登录状态</td>
+                            <td>会话</td>
+                        </tr>
+                        <tr>
+                            <td>remember_token</td>
+                            <td>功能 Cookie</td>
+                            <td>记住"记住我"选项</td>
+                            <td>30 天</td>
+                        </tr>
+                        <tr>
+                            <td>auth_token</td>
+                            <td>必要 Cookie</td>
+                            <td>身份验证</td>
+                            <td>7 天</td>
+                        </tr>
+                        <tr>
+                            <td>preferences</td>
+                            <td>功能 Cookie</td>
+                            <td>保存用户偏好设置</td>
+                            <td>1 年</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="content-card">
+                <h2>四、第三方 Cookie</h2>
+                <p>我们的网站可能包含来自第三方的 Cookie，这些第三方可能设置自己的 Cookie 来收集您的信息。第三方 Cookie 通常用于以下目的：</p>
+                <ul>
+                    <li><strong>51.La 统计：</strong>用于网站流量分析和统计</li>
+                    <li><strong>百度统计：</strong>用于分析用户访问行为</li>
+                    <li><strong>社交媒体分享：</strong>支持社交媒体分享功能</li>
+                    <li><strong>视频播放器：</strong>如您观看托管视频，可能涉及第三方播放器 Cookie</li>
+                </ul>
+                <p>我们不对第三方 Cookie 的隐私实践负责，建议您查看第三方的隐私政策以了解其数据处理方式。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>五、如何管理 Cookie</h2>
+                <p>您可以通过以下方式管理 Cookie 偏好：</p>
+                
+                <h3>5.1 浏览器设置</h3>
+                <p>大多数浏览器提供设置选项，您可以：</p>
+                <ul>
+                    <li>查看已存储的 Cookie</li>
+                    <li>允许或阻止所有 Cookie</li>
+                    <li>在 Cookie 被放置前显示提示</li>
+                    <li>删除特定 Cookie 或所有 Cookie</li>
+                </ul>
+                <p>请注意，阻止必要 Cookie 可能影响网站的正常运行。</p>
+                
+                <h3>5.2 浏览器退出时的处理</h3>
+                <p>部分 Cookie 会在您退出浏览器后自动删除（会话 Cookie），而其他 Cookie 可能会在您的设备上保留更长时间。</p>
+                
+                <h3>5.3 退出在线追踪</h3>
+                <p>您可以通过以下链接了解更多关于退出在线追踪的信息：</p>
+                <ul>
+                    <li>Google Analytics: <span class="highlight">https://tools.google.com/dlpage/gaoptout</span></li>
+                    <li>百度统计: <span class="highlight">https://tongji.baidu.com/web/help/article?id=334</span></li>
+                </ul>
+            </div>
+            
+            <div class="content-card">
+                <h2>六、Do Not Track</h2>
+                <p>我们的网站支持"Do Not Track"（DNT）浏览器设置。当您开启 DNT 功能时，我们会尊重您的选择，不会进行在线追踪。请注意，启用 DNT 可能会影响部分网站功能。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>七、本地存储和其他技术</h2>
+                <p>除 Cookie 外，我们还可能使用以下本地存储技术：</p>
+                <ul>
+                    <li><strong>Local Storage：</strong>用于在浏览器中存储较大数据</li>
+                    <li><strong>Session Storage：</strong>与 Local Storage 类似，但仅在会话期间保留</li>
+                    <li><strong>IndexedDB：</strong>用于存储大量结构化数据</li>
+                </ul>
+                <p>这些技术的使用方法与 Cookie 类似，您可通过浏览器设置进行管理。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>八、政策更新</h2>
+                <p>我们可能会不时更新本 Cookie 政策。如有重大变更，我们将通过网站公告或直接通知您。建议您定期查阅本页面以获取最新信息。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>九、联系我们</h2>
+                <p>如您对本 Cookie 政策有任何疑问，请通过以下方式联系我们：</p>
+                <ul>
+                    <li>电子邮件：<span class="highlight">privacy@todesk.com</span></li>
+                    <li>客服热线：400-888-8888</li>
+                    <li>办公地址：XX省XX市XX区XX路XX号XX大厦</li>
+                </ul>
+                <p>更多关于我们如何处理您个人信息的内容，请参阅我们的 <a href="privacy-policy.html" style="color: var(--accent-cyan);">隐私政策</a>。</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="logo.svg" alt="ToDesk">
+                    </div>
+                    <p>ToDesk 是新一代远程控制软件，致力于为用户提供安全、稳定、高速的远程桌面连接服务，让远程协作更简单。</p>
+                </div>
+                <div class="footer-column">
+                    <h5>功能</h5>
+                    <ul>
+                        <li><a href="index.html#features">远程控制</a></li>
+                        <li><a href="index.html#features">文件传输</a></li>
+                        <li><a href="index.html#features">远程摄像头</a></li>
+                        <li><a href="index.html#features">隐私模式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>场景</h5>
+                    <ul>
+                        <li><a href="index.html#scenes">远程办公</a></li>
+                        <li><a href="index.html#scenes">技术支持</a></li>
+                        <li><a href="index.html#scenes">IT运维</a></li>
+                        <li><a href="index.html#scenes">在线教育</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>帮助</h5>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">视频教程</a></li>
+                        <li><a href="#">更新日志</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>法律</h5>
+                    <ul>
+                        <li><a href="privacy-policy.html">隐私政策</a></li>
+                        <li><a href="user-agreement.html">用户协议</a></li>
+                        <li><a href="cookie-policy.html">Cookie 政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="https://www.todesk.com">官网首页</a>
+                    <a href="https://www.todesk.com/download.html">产品下载</a>
+                    <a href="https://www.todesk.com/about.html">关于我们</a>
+                </div>
+                <p>© 2024 ToDesk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

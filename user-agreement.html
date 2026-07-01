@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户协议 - ToDesk 远程控制</title>
+    <meta name="description" content="ToDesk用户协议，使用条款和服务条件。">
+    <meta name="keywords" content="ToDesk用户协议,服务条款,使用条款">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #0a1628;
+            --secondary: #1e3a5f;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --text-white: #ffffff;
+            --text-gray: #94a3b8;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', -apple-system, sans-serif;
+            background-color: var(--primary);
+            color: var(--text-white);
+            line-height: 1.8;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+        
+        .btn-download {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 140px 0 100px;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--text-white), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+        
+        .page-header p {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+        
+        .content-card {
+            background: rgba(30, 58, 95, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .content-card h2 {
+            font-size: 1.4rem;
+            color: var(--accent-cyan);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .content-card h3 {
+            font-size: 1.15rem;
+            color: var(--text-white);
+            margin: 25px 0 15px;
+        }
+        
+        .content-card p {
+            color: var(--text-gray);
+            margin-bottom: 15px;
+        }
+        
+        .content-card ul {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .content-card ul li {
+            color: var(--text-gray);
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        .content-card ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+        }
+        
+        .highlight {
+            color: var(--accent-cyan);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-cyan);
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            gap: 12px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary);
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            padding: 50px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-brand .logo {
+            margin-bottom: 20px;
+        }
+        
+        .footer-brand .logo img {
+            height: 50px;
+        }
+        
+        .footer-brand p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        
+        .footer-column h5 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text-white);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: var(--text-gray);
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent-cyan);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom-links {
+            margin-bottom: 15px;
+        }
+        
+        .footer-bottom-links a {
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        
+        .footer-bottom-links a:hover {
+            color: var(--accent-cyan);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .content-card {
+                padding: 25px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
+    <script charset="UTF-8" id="LA-COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"3QQPPstt6fK5NwcH",ck:"3QQPPstt6fK5NwcH"})</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="logo.svg" alt="ToDesk">
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html">首页</a>
+                    <a href="index.html#features">功能介绍</a>
+                    <a href="index.html#comparison">产品对比</a>
+                    <a href="https://www.todesk.com/download.html" class="btn-download">立即下载</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                ← 返回首页
+            </a>
+            
+            <div class="page-header">
+                <h1>用户协议</h1>
+                <p>最后更新日期：2024年1月1日</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>一、协议概述</h2>
+                <p>欢迎使用 ToDesk 远程控制软件及服务（以下简称"ToDesk"或"本服务"）。本协议是您与 ToDesk 之间关于使用本服务的法律协议。在使用本服务之前，请您仔细阅读本协议的全部内容。如果您不同意本协议的任何内容，请不要注册、登录或使用本服务。您通过网络页面点击确认或以其他方式选择接受本协议，即表示您与 ToDesk 已达成协议，同意接受本协议的全部约定内容。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>二、服务说明</h2>
+                <p>ToDesk 是一款远程控制软件，提供以下服务：</p>
+                <ul>
+                    <li>远程桌面控制与访问</li>
+                    <li>文件传输与同步</li>
+                    <li>远程摄像头查看</li>
+                    <li>声音同步传输</li>
+                    <li>设备管理与批量操作</li>
+                    <li>其他相关功能服务</li>
+                </ul>
+                <p>ToDesk 保留随时变更、中断或终止部分或全部服务的权利，并不承担任何责任。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>三、账户注册与管理</h2>
+                
+                <h3>3.1 账户注册</h3>
+                <p>您在使用本服务前需要注册 ToDesk 账户。您应按要求提供真实、准确、完整的注册信息，并及时更新。如信息有任何变动，您应负责及时更新。</p>
+                
+                <h3>3.2 账户安全</h3>
+                <p>您有责任妥善保管账户信息，确保账户安全。您须对使用该账户所进行的一切活动承担全部责任。如发现任何未经授权使用您账户的情况，您应立即通知我们。</p>
+                
+                <h3>3.3 账户注销</h3>
+                <p>您可通过联系客服申请注销账户。账户注销后，您的部分个人信息将根据适用法律和我们的隐私政策进行保留或删除处理。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>四、使用规范</h2>
+                <p>您在使用 ToDesk 服务时，应遵守以下规定：</p>
+                <ul>
+                    <li>遵守中华人民共和国法律法规</li>
+                    <li>遵守网络安全和信息保护相关规定</li>
+                    <li>不得利用本服务从事任何违法犯罪活动</li>
+                    <li>不得侵犯他人合法权益，包括但不限于隐私权、知识产权等</li>
+                    <li>不得尝试未授权访问他人设备或数据</li>
+                    <li>不得实施任何可能危害网络安全的行为</li>
+                    <li>不得反向工程、反编译或破解本软件</li>
+                    <li>不得传播恶意代码或病毒</li>
+                </ul>
+                <p><span class="highlight">严禁使用 ToDesk 进行任何未经对方明确授权的远程访问行为。</span>进行远程控制前，请务必获得被控设备所有者的合法授权。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>五、知识产权</h2>
+                <p>ToDesk 的所有知识产权，包括但不限于软件、界面设计、图标、文档等，均归 ToDesk 或其许可方所有。未经授权，任何人不得复制、修改、传播、反向工程或以其他方式侵犯 ToDesk 的知识产权。</p>
+                <p>您在使用本服务过程中产生的任何内容（包括但不限于远程操作记录、文件传输内容）的知识产权归您所有，但您授予 ToDesk 必要的使用许可，以便我们提供服务。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>六、隐私保护</h2>
+                <p>我们高度重视您的隐私保护。关于我们如何收集、使用和保护您的个人信息，请参阅我们的 <a href="privacy-policy.html" style="color: var(--accent-cyan);">隐私政策</a>。</p>
+                <p>远程控制过程中的屏幕画面、操作指令和文件传输数据均采用端到端加密，ToDesk 无法访问这些内容。我们仅在必要时记录必要的连接日志和性能数据，用于服务优化和安全分析。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>七、免责声明</h2>
+                <p><strong>在适用法律允许的最大范围内，ToDesk 不对以下情况承担任何责任：</strong></p>
+                <ul>
+                    <li>因不可抗力、政府行为、电信故障等原因导致的服务中断</li>
+                    <li>因用户操作不当或网络环境问题导致的连接失败或数据丢失</li>
+                    <li>用户使用本服务进行的任何行为及其后果</li>
+                    <li>用户设备被第三方非法访问或控制</li>
+                    <li>因用户违反本协议导致的任何损失</li>
+                    <li>间接、偶然、特殊或惩罚性损害，即使我们已被告知可能发生</li>
+                </ul>
+                <p>本服务的提供"按现状"进行，我们不对服务的及时性、安全性、完整性、准确性做任何明示或暗示的保证。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>八、服务变更与终止</h2>
+                <p>ToDesk 保留随时修改、暂停或终止服务的权利。如有重大变更，我们将提前通知用户。用户可选择停止使用服务并注销账户。</p>
+                <p>如用户违反本协议的任何规定，ToDesk 有权立即终止向该用户提供服务，并保留进一步追究法律责任的权利。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>九、协议修改</h2>
+                <p>ToDesk 有权随时修改本协议的任何条款。修改后的协议一经公布即生效。如果您在协议修改后继续使用服务，视为您已接受修改后的协议。建议您定期查阅本协议以获取最新信息。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>十、法律适用与争议解决</h2>
+                <p>本协议的订立、执行和解释均适用中华人民共和国法律。如双方发生争议，应首先通过友好协商解决；协商不成的，任何一方可向有管辖权的人民法院提起诉讼。</p>
+            </div>
+            
+            <div class="content-card">
+                <h2>十一、联系我们</h2>
+                <p>如您对本协议有任何疑问，请通过以下方式联系我们：</p>
+                <ul>
+                    <li>电子邮件：<span class="highlight">legal@todesk.com</span></li>
+                    <li>客服热线：400-888-8888</li>
+                    <li>办公地址：XX省XX市XX区XX路XX号XX大厦</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="logo.svg" alt="ToDesk">
+                    </div>
+                    <p>ToDesk 是新一代远程控制软件，致力于为用户提供安全、稳定、高速的远程桌面连接服务，让远程协作更简单。</p>
+                </div>
+                <div class="footer-column">
+                    <h5>功能</h5>
+                    <ul>
+                        <li><a href="index.html#features">远程控制</a></li>
+                        <li><a href="index.html#features">文件传输</a></li>
+                        <li><a href="index.html#features">远程摄像头</a></li>
+                        <li><a href="index.html#features">隐私模式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>场景</h5>
+                    <ul>
+                        <li><a href="index.html#scenes">远程办公</a></li>
+                        <li><a href="index.html#scenes">技术支持</a></li>
+                        <li><a href="index.html#scenes">IT运维</a></li>
+                        <li><a href="index.html#scenes">在线教育</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>帮助</h5>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">视频教程</a></li>
+                        <li><a href="#">更新日志</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>法律</h5>
+                    <ul>
+                        <li><a href="privacy-policy.html">隐私政策</a></li>
+                        <li><a href="user-agreement.html">用户协议</a></li>
+                        <li><a href="cookie-policy.html">Cookie 政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="https://www.todesk.com">官网首页</a>
+                    <a href="https://www.todesk.com/download.html">产品下载</a>
+                    <a href="https://www.todesk.com/about.html">关于我们</a>
+                </div>
+                <p>© 2024 ToDesk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDesk下载_ToDesk远程控制软件官方免费下载_电脑版</title>
+    <meta name="description" content="ToDesk远程控制软件官方下载，支持Windows/Mac/Linux/iOS/Android全平台。免费使用，延迟低至3ms，4K高清画质，端到端加密，3亿用户信赖之选。">
+    <meta name="keywords" content="ToDesk下载,ToDesk远程控制,远程桌面软件,远程控制下载,ToDesk电脑版">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:title" content="ToDesk下载_ToDesk远程控制软件官方免费下载_电脑版">
+    <meta property="og:description" content="ToDesk远程控制软件官方下载，支持Windows/Mac/Linux全平台，3亿用户信赖之选。">
+    <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #0a1628;
+            --secondary: #1e3a5f;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --text-white: #ffffff;
+            --text-gray: #94a3b8;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', -apple-system, sans-serif;
+            background-color: var(--primary);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+        
+        .btn-download {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 120px 20px 80px;
+            background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/hero-remote.jpg') center/cover no-repeat;
+            opacity: 0.15;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--text-white) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            color: white;
+            padding: 16px 48px;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--accent-blue);
+            color: white;
+            padding: 14px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--accent-blue);
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: var(--secondary);
+            padding: 60px 0;
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-item p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+        
+        /* Installation Steps */
+        .installation {
+            padding: 100px 0;
+            background: var(--primary);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+        }
+        
+        .section-title span {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+        
+        .steps-grid::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+            z-index: 0;
+        }
+        
+        .step-card {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-number {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            border: 3px solid var(--accent-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-cyan);
+        }
+        
+        .step-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .step-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        
+        .feature-card {
+            background: rgba(30, 58, 95, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.2);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-white);
+        }
+        
+        .feature-card h4 span {
+            color: var(--accent-cyan);
+            font-size: 0.85rem;
+        }
+        
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Scenes Section */
+        .scenes {
+            padding: 100px 0;
+            background: var(--secondary);
+        }
+        
+        .scenes-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        
+        .scene-card {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+        }
+        
+        .scene-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        
+        .scene-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(10, 22, 40, 0.95));
+            border-radius: 0 0 12px 12px;
+        }
+        
+        .scene-overlay h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .scene-overlay p {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+        }
+        
+        /* Comparison Section */
+        .comparison {
+            padding: 100px 0;
+            background: var(--primary);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(30, 58, 95, 0.5);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .comparison-table th {
+            background: var(--accent-blue);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .comparison-table th:first-child {
+            background: var(--secondary);
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table td:first-child {
+            font-weight: 600;
+            background: rgba(10, 22, 40, 0.5);
+        }
+        
+        .comparison-table .highlight {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+        
+        .comparison-table .check {
+            color: #22c55e;
+        }
+        
+        .comparison-table .cross {
+            color: #ef4444;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: rgba(30, 58, 95, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 20px 25px;
+            background: transparent;
+            border: none;
+            color: var(--text-white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-cyan);
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer-content {
+            padding: 0 25px 20px;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--secondary);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        
+        .testimonial-card {
+            background: rgba(10, 22, 40, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+        }
+        
+        .testimonial-stars {
+            color: #fbbf24;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-text {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .author-info h5 {
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+        
+        .author-info p {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary);
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            padding: 80px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-brand .logo {
+            margin-bottom: 20px;
+        }
+        
+        .footer-brand .logo img {
+            height: 50px;
+        }
+        
+        .footer-brand p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        
+        .footer-column h5 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text-white);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: var(--text-gray);
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent-cyan);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom-links {
+            margin-bottom: 15px;
+        }
+        
+        .footer-bottom-links a {
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        
+        .footer-bottom-links a:hover {
+            color: var(--accent-cyan);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .features-grid,
+            .scenes-grid,
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+            
+            .steps-grid::before {
+                display: none;
+            }
+            
+            .features-grid,
+            .scenes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px 8px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script charset="UTF-8" id="LA-COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"3QQPPstt6fK5NwcH",ck:"3QQPPstt6fK5NwcH"})</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <img src="logo.svg" alt="ToDesk">
+                </a>
+                <nav class="nav-links">
+                    <a href="#features">功能介绍</a>
+                    <a href="#scenes">应用场景</a>
+                    <a href="#comparison">产品对比</a>
+                    <a href="#faq">常见问题</a>
+                    <a href="https://www.todesk.com/download.html" class="btn-download">立即下载</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ToDesk 远程控制</h1>
+            <p>免费、安全、高速的远程桌面连接方案</p>
+            <div class="hero-buttons">
+                <a href="https://www.todesk.com/download.html" class="btn-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7,10 12,15 17,10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    免费下载 Windows 版
+                </a>
+                <a href="https://www.todesk.com/download.html" class="btn-secondary">了解更多</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>3亿+</h3>
+                    <p>全球用户</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50亿+</h3>
+                    <p>月连接时长</p>
+                </div>
+                <div class="stat-item">
+                    <h3>40万+</h3>
+                    <p>企业客户</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>国家地区</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="installation" id="installation">
+        <div class="container">
+            <h2 class="section-title">简单<span>四步</span>，快速连接</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4>下载安装包</h4>
+                    <p>前往官网下载 ToDesk 安装包，支持 Windows、Mac、Linux 等系统</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4>安装客户端</h4>
+                    <p>双击安装包，按照提示完成软件安装，全程仅需几秒钟</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4>登录账号</h4>
+                    <p>使用手机号或邮箱注册登录，也可跳过直接使用设备码连接</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h4>输入设备码连接</h4>
+                    <p>在被控端获取设备码，在主控端输入即可建立远程连接</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">核心<span>功能</span>，卓越体验</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h4>ZeroSync® <span>传输引擎</span></h4>
+                    <p>端到端延迟低至 3ms，自研 RTC 协议优化，流畅操作如本地般顺滑</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎥</div>
+                    <h4>4K <span>超清画质</span></h4>
+                    <p>60FPS 高帧率，8ms 超低编码延迟，纤毫毕现的视觉体验</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h4>全平台 <span>支持</span></h4>
+                    <p>Windows / Mac / Linux / iOS / Android / 鸿蒙系统全覆盖</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h4>端到端 <span>加密</span></h4>
+                    <p>xchacha20-ietf-poly1305 军事级加密算法，数据传输固若金汤</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📁</div>
+                    <h4>高速 <span>文件传输</span></h4>
+                    <p>传输速度高达 12MB/s，支持断点续传，大文件轻松搞定</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🖥️</div>
+                    <h4>多屏 <span>协作</span></h4>
+                    <p>多屏对多屏映射，虚拟扩展屏技术，办公效率倍增</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h4>外设 <span>兼容</span></h4>
+                    <p>完美支持数位板、游戏手柄、蓝牙键鼠等各类外设</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h4>AI <span>百宝箱</span></h4>
+                    <p>OCR 文字识别、日志分析、故障自查，智能运维新体验</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="scenes" id="scenes">
+        <div class="container">
+            <h2 class="section-title">丰富<span>应用场景</span>，满足多元需求</h2>
+            <div class="scenes-grid">
+                <div class="scene-card">
+                    <img src="images/scene-work.jpg" alt="远程办公" style="aspect-ratio:16/9; width:100%; height:auto; object-fit:cover; border-radius:12px;">
+                    <div class="scene-overlay">
+                        <h4>远程办公</h4>
+                        <p>居家出差，随时访问公司电脑</p>
+                    </div>
+                </div>
+                <div class="scene-card">
+                    <img src="images/scene-server.jpg" alt="服务器管理" style="aspect-ratio:16/9; width:100%; height:auto; object-fit:cover; border-radius:12px;">
+                    <div class="scene-overlay">
+                        <h4>技术支持</h4>
+                        <p>快速响应，高效解决客户问题</p>
+                    </div>
+                </div>
+                <div class="scene-card">
+                    <img src="images/cross-platform.jpg" alt="跨平台协作" style="aspect-ratio:16/9; width:100%; height:auto; object-fit:cover; border-radius:12px;">
+                    <div class="scene-overlay">
+                        <h4>IT运维</h4>
+                        <p>批量管理，运维工作更轻松</p>
+                    </div>
+                </div>
+                <div class="scene-card">
+                    <img src="images/scene-work.jpg" alt="远程协助" style="aspect-ratio:16/9; width:100%; height:auto; object-fit:cover; border-radius:12px;">
+                    <div class="scene-overlay">
+                        <h4>在线教育</h4>
+                        <p>远程演示，教学互动更便捷</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="comparison" id="comparison">
+        <div class="container">
+            <h2 class="section-title">产品<span>对比</span>，优势一目了然</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>功能特性</th>
+                        <th>ToDesk</th>
+                        <th>TeamViewer</th>
+                        <th>向日葵</th>
+                        <th>AnyDesk</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>基础使用</td>
+                        <td class="highlight">免费</td>
+                        <td>商业收费</td>
+                        <td>免费/付费</td>
+                        <td>免费/付费</td>
+                    </tr>
+                    <tr>
+                        <td>延迟表现</td>
+                        <td class="highlight">3ms</td>
+                        <td>15-30ms</td>
+                        <td>10-20ms</td>
+                        <td>8-15ms</td>
+                    </tr>
+                    <tr>
+                        <td>4K画质</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="cross">✗</td>
+                        <td class="cross">✗</td>
+                    </tr>
+                    <tr>
+                        <td>文件传输速度</td>
+                        <td class="highlight">12MB/s</td>
+                        <td>8MB/s</td>
+                        <td>5MB/s</td>
+                        <td>6MB/s</td>
+                    </tr>
+                    <tr>
+                        <td>全平台支持</td>
+                        <td class="check">✓ 6大平台</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>端到端加密</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>AI助手</td>
+                        <td class="check">✓</td>
+                        <td class="cross">✗</td>
+                        <td class="cross">✗</td>
+                        <td class="cross">✗</td>
+                    </tr>
+                    <tr>
+                        <td>企业专版</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="cross">✗</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">常见<span>问题</span></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">ToDesk 是免费的吗？</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            是的，ToDesk 个人版完全免费使用，不限制连接时长和流量。企业用户可根据需求选择专业版或企业版，享受更多高级功能和技术支持服务。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">ToDesk 安全吗？</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            ToDesk 采用 xchacha20-ietf-poly1305 端到端加密算法，所有数据传输均经过加密处理，确保您的数据安全。我们通过了国家信息安全等级保护三级认证，并获得 ISO 27001 安全管理体系认证。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">远程控制时延迟很高怎么办？</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            首先确保网络连接稳定，建议使用有线网络或 5GHz Wi-Fi。其次可以在设置中降低画质以减少带宽占用。如果对方网络较差，可开启"流畅模式"获得更好的操控体验。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">如何实现跨平台控制？</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            ToDesk 支持 Windows、Mac、Linux、iOS、Android、鸿蒙等全平台。您只需在被控端和主控端分别安装对应版本的 ToDesk，登录同一账号即可轻松实现跨平台远程控制。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">文件传输如何使用？</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            连接成功后，点击工具栏中的"文件"按钮打开文件传输面板。您可以直接拖拽文件进行传输，支持断点续传，大文件传输中途断开也能无缝继续。传输速度最高可达 12MB/s。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">是否支持无人值守访问？</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            支持。在被控端开启"无人值守访问"选项并设置安全密码，即可在主控端无人在场时自动建立连接。配合开机启动功能，实现真正的远程无人值守运维。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">远程控制时会消耗多少流量？</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            流量消耗取决于画质设置和操作内容。标清模式约 30-50MB/小时，高清模式约 100-200MB/小时，4K 画质约 500MB-1GB/小时。纯文字操作流量极低，观看视频则消耗较大。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">企业版有哪些专属功能？</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            企业版提供设备管理后台、批量部署、权限分级、审计日志、SOC 2 报告、专属线路、VIP 客服等企业级功能。同时支持私有化部署，满足金融、政府等高安全要求场景。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">如何修改设备码和设置安全密码？</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            在 ToDesk 客户端设置中找到"安全"选项，可以自定义设备码和设置连接密码。建议启用"连接需密码确认"和"手机验证码"等多重验证方式，保障连接安全。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">远程控制时对方能看见屏幕操作吗？</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            默认情况下，被控端可以看到主控的操作并显示光标位置。如需隐藏操作痕迹，可在主控端设置中开启"隐私模式"，此时被控端屏幕保持黑屏，主控可完全静默操作。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">用户<span>评价</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"用了 ToDesk 三年了，从个人用户变成公司统一部署。它的高清画质和低延迟让远程办公变得毫无压力，比之前用的 TeamViewer 体验好太多。"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">张</div>
+                        <div class="author-info">
+                            <h5>张明远</h5>
+                            <p>某科技公司 IT 总监</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"作为独立开发者，经常需要远程调试客户环境。ToDesk 的跨平台支持和文件传输功能太强大了，12MB/s 的速度让大文件传输不再是问题。"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">李</div>
+                        <div class="author-info">
+                            <h5>李思琪</h5>
+                            <p>自由开发者</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"我们是连锁教育机构，用 ToDesk 给各地分校做远程培训。AI 百宝箱的 OCR 功能特别实用，批量处理文档效率提升明显。"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">王</div>
+                        <div class="author-info">
+                            <h5>王建国</h5>
+                            <p>教育集团技术负责人</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"疫情期间居家办公全靠 ToDesk，延迟低到几乎感觉不出是远程。特别是游戏手柄支持，周末还能远程陪父母玩老游戏，太贴心了。"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">陈</div>
+                        <div class="author-info">
+                            <h5>陈雨晴</h5>
+                            <p>产品经理</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"运维 200 多台服务器，以前用命令行，现在用 ToDesk 图形化操作效率翻倍。批量部署功能让新服务器上线时间从 2 小时缩短到 20 分钟。"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">刘</div>
+                        <div class="author-info">
+                            <h5>刘强</h5>
+                            <p>运维工程师</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"给家里老人电脑装上 ToDesk，他们遇到问题我远程一看就知道了。比电话里描述问题方便一百倍，老妈终于不再说电脑坏了。"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">赵</div>
+                        <div class="author-info">
+                            <h5>赵晓文</h5>
+                            <p>国企职员</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="logo.svg" alt="ToDesk">
+                    </div>
+                    <p>ToDesk 是新一代远程控制软件，致力于为用户提供安全、稳定、高速的远程桌面连接服务，让远程协作更简单。</p>
+                </div>
+                <div class="footer-column">
+                    <h5>功能</h5>
+                    <ul>
+                        <li><a href="#">远程控制</a></li>
+                        <li><a href="#">文件传输</a></li>
+                        <li><a href="#">远程摄像头</a></li>
+                        <li><a href="#">声音同步</a></li>
+                        <li><a href="#">隐私模式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>场景</h5>
+                    <ul>
+                        <li><a href="#">远程办公</a></li>
+                        <li><a href="#">技术支持</a></li>
+                        <li><a href="#">IT运维</a></li>
+                        <li><a href="#">在线教育</a></li>
+                        <li><a href="#">游戏串流</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>帮助</h5>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">视频教程</a></li>
+                        <li><a href="#">更新日志</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入社群</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>法律</h5>
+                    <ul>
+                        <li><a href="privacy-policy.html">隐私政策</a></li>
+                        <li><a href="user-agreement.html">用户协议</a></li>
+                        <li><a href="cookie-policy.html">Cookie 政策</a></li>
+                        <li><a href="#">知识产权</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="https://www.todesk.com">官网首页</a>
+                    <a href="https://www.todesk.com/download.html">产品下载</a>
+                    <a href="https://www.todesk.com/about.html">关于我们</a>
+                    <a href="https://www.todesk.com/blog">博客</a>
+                </div>
+                <p>© 2024 ToDesk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    <meta name="baidu-site-verification" content="2a5f886251704defa23729de138bf9f1"/>
+</body>
+</html>
